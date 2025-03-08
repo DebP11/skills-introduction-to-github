@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <h1>Hello</h1>
+    </body>
+    <script>
+        npm install firebase
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBKvVMPqjcs4Qgw7_RJjMF7W2HoNzoGpfw",
+  authDomain: "demo1-36e49.firebaseapp.com",
+  projectId: "demo1-36e49",
+  storageBucket: "demo1-36e49.firebasestorage.app",
+  messagingSenderId: "258060164637",
+  appId: "1:258060164637:web:a5406f9d854af8b67bf0f4",
+  measurementId: "G-65L505J7BQ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const provide = new GoogleAuthProvider();
+signInwithPopup(auth, provide)
+.then((result) => {
+    const user = result.user;
+}).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+});
+</script>
+</html>
